@@ -4,7 +4,14 @@
 public class LoginModule {
 
     public static void main(String[] args){
-            System.out.print("Login into the system:");
+
+        while(true){
+            MyApp myapp = new MyApp("Webonator Social");
+            User user = myapp.login();
+        }
+
+
+
     }
 
 }
