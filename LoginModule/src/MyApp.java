@@ -29,6 +29,7 @@ public class MyApp {
 
         int login_method = scan.nextInt();
 
+        // Login using default method.
         if(login_method==1){
             System.out.print("E-mail: ");
             String email = scan.next();
@@ -41,6 +42,7 @@ public class MyApp {
             user = new User(email, this.name);
             return user;
         }
+        // Login using social media plugins
         else{
             SocialMedia social_media = null;
 
@@ -54,8 +56,6 @@ public class MyApp {
                 System.out.println("Invalid input. Try again?");
                 return login();
             }
-
-
 
             user = new User(social_media, this.name);
             return user;

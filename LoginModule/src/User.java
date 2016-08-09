@@ -11,8 +11,9 @@ public class User {
     String email;
     String hash;
     String app_name;
-    List<SocialMedia> social_media_logins = new ArrayList<SocialMedia>();
+    List<SocialMedia> social_media_logins = new ArrayList<SocialMedia>(); // List of websites a user has logged in via.
 
+    // User created through social media login
     User(SocialMedia social_media, String app_name) {
         System.out.println("Welcome user " + social_media.email + "! [Logged in via " + social_media.type + "]");
         email = social_media.email;
@@ -20,12 +21,14 @@ public class User {
         social_media_logins.add(social_media);
     }
 
+    // User created through normal login
     User(String email, String app_name){
         this.email = email;
         app_name = app_name;
         System.out.println("Welcome user " + email + "!");
     }
 
+    // Displays currently logged in users.
     static void logged_in_users_display(List<User> users){
 
         System.out.print("List of logged in users: ");

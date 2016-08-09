@@ -17,7 +17,7 @@ public class Cable {
         cable_provider = name;
     }
 
-    //safe-copy constructor
+    //safe-copy constructor for cable object (deep copy)
     public Cable(Cable c){
         this.cable_provider = c.cable_provider;
         this.cable_provider = c.cable_provider;
