@@ -8,7 +8,7 @@ public abstract class SocialMedia {
     String hash;
     String type;
 
-    boolean login(){
+    SocialMedia(){
         Scanner scan = new Scanner(System.in);
 
         System.out.print("E-mail: ");
@@ -16,9 +16,11 @@ public abstract class SocialMedia {
 
         System.out.print("Password: ");
         String password = scan.next();
+
         // check DB.
 
         this.email = email;
-        return true;
-    };
+        this.hash = password;
+
+    }
 }

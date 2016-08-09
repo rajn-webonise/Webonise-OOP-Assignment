@@ -2,11 +2,14 @@
  * Created by webonise on 8/8/16.
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MyApp {
 
     String name;
+    List<User> logged_in_users = new ArrayList<User>();
 
     MyApp(String name){
         this.name = name;
@@ -16,7 +19,7 @@ public class MyApp {
         User user = null;
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Login into the " + name + " system: \n" +
+        System.out.println("\n\nLogin into the " + name + " system: \n" +
                 "1. Login via " + name +
                 "\n2. Login via Facebook" +
                 "\n3. Login via Twitter" +
@@ -32,24 +35,27 @@ public class MyApp {
             String password = scan.next();
 
             // check in DB.
-            user = new User(email);
+            user = new User(email, this.name);
             return user;
         }
         else{
             SocialMedia social_media = null;
+
             if(login_method==2)
                 social_media= new Facebook();
             else if(login_method==3)
                 social_media = new Twitter();
-
-            if(social_media.login()==true){
-                user = new User(social_media);
-                return user;
+            else if(login_method==4)
+                social_media = new Github();
+            else{
+                System.out.println("Invalid input. Try again?");
+                return login();
             }
 
 
-            return user;
 
+            user = new User(social_media, this.name);
+            return user;
         }
 
 

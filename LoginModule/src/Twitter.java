@@ -11,8 +11,8 @@ public class Twitter extends SocialMedia {
     List<String> previous_tweets;
 
     Twitter(){
+        super();
         type = "Twitter";
-        System.out.println("Login via " + type + ": \n");
 
     }
 

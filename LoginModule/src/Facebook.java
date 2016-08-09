@@ -9,8 +9,8 @@ public class Facebook extends SocialMedia {
     String birthday;
 
     Facebook(){
+        super();
         type = "Facebook";
-        System.out.println("Login via " + type + ": \n");
     }
 
 }

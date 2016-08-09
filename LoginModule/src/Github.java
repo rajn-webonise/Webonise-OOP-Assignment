@@ -10,8 +10,8 @@ public class Github extends SocialMedia {
     List<Integer> follower;
 
     Github(){
+        super();
         type = "Github";
-        System.out.println("Login via " + type + ": \n");
 
     }
 }
