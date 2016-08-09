@@ -11,13 +11,15 @@ public class MainActivity {
 
     public static void main(String[] args){
 
+        // My mobile
         UI myUI = new UI("Android", "Sony", "7276485");
+        //Rest of the seeded phones to interact with.
         init();
 
         while(true){
             myUI.display();
         }
-        
+
     }
 
     static void init(){

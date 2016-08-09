@@ -43,7 +43,7 @@ public class Messenger extends BaseApp {
 
         String send_to = reader.nextLine();
 
-
+        // Checking if given number exists? If yes, send the message.
         for(int i=0;i<UI.world.size();i++){
 
             if(send_to.equalsIgnoreCase(UI.world.get(i).handset.phone_number)){

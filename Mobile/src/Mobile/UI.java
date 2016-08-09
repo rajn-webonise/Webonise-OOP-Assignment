@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class UI {
 
+    // Global list of phones.
     public static List<UI> world = new ArrayList<UI>();
     Handset handset;
 
@@ -20,6 +21,7 @@ public class UI {
 
 
     public void display(){
+
         System.out.println("\n\n---\nUnlocked device: ");
         displayOptions();
 
@@ -33,9 +35,11 @@ public class UI {
         int option = reader.nextInt();
 
         if(option==1){
+            // Allows phone to make calls.
             this.handset.dialer.call(this.handset.phone_number);
         }
         else if(option==2){
+            // Allows to send messages.
             this.handset.messenger.displayOptions();
         }
 

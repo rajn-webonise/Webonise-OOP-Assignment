@@ -21,11 +21,13 @@ public class Dialer extends BaseApp {
         Scanner reader = new Scanner(System.in);
         String number = reader.nextLine();
 
+        // Checking if number exists? IF yes, send the call.
         for(int i=0;i<UI.world.size();i++){
 
             if(number.equalsIgnoreCase(UI.world.get(i).handset.phone_number)){
                 recieve(calling_number);
                 System.out.println("In call with " + number + ". Give any input to end call & continue.");
+                reader.nextLine();
             }
 
         }
