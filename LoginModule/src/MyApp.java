@@ -2,6 +2,8 @@
  * Created by webonise on 8/8/16.
  */
 
+import SocialMedia.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -34,7 +36,8 @@ public class MyApp {
             System.out.print("Password: ");
             String password = scan.next();
 
-            // check in DB.
+            // Check in DB
+
             user = new User(email, this.name);
             return user;
         }
